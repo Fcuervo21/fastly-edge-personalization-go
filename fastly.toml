@@ -1,0 +1,14 @@
+# This file describes a Fastly Compute package. To learn more visit:
+# https://www.fastly.com/documentation/reference/compute/fastly-toml
+
+authors = ["developer@example.com"]
+description = "Edge-based personalization engine (Go port) — dynamic edge content optimization using Fastly Compute geolocation headers and device detection at the POP"
+language = "go"
+manifest_version = 3
+name = "fastly-edge-personalization-go"
+service_id = "TODO-SET-YOUR-SERVICE-ID"
+
+[local_server]
+
+[scripts]
+build = "GOARCH=wasm GOOS=wasip1 go build -o bin/main.wasm ."
