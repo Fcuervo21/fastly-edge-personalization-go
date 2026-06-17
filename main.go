@@ -54,6 +54,11 @@ type MetaInfo struct {
 
 func main() {
 	fsthttp.ServeFunc(func(ctx context.Context, w fsthttp.ResponseWriter, r *fsthttp.Request) {
+		w.Header().Set("X-Content-Type-Options", "nosniff")
+		w.Header().Set("X-Frame-Options", "DENY")
+		w.Header().Set("Referrer-Policy", "strict-origin-when-cross-origin")
+		w.Header().Set("Permissions-Policy", "geolocation=(), camera=(), microphone=()")
+
 		switch r.URL.Path {
 		case "/_edge/healthcheck":
 			w.Header().Set("Content-Type", "text/plain")

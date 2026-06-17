@@ -6,9 +6,9 @@ description = "Edge-based personalization engine (Go port) — dynamic edge cont
 language = "go"
 manifest_version = 3
 name = "fastly-edge-personalization-go"
-service_id = "TODO-SET-YOUR-SERVICE-ID"
+service_id = "iCb3Rt8LRC48zX9Oyw9RUg"
 
 [local_server]
 
 [scripts]
-build = "GOARCH=wasm GOOS=wasip1 go build -o bin/main.wasm ."
+  build = "GOARCH=wasm GOOS=wasip1 go build -o bin/main.wasm ."
